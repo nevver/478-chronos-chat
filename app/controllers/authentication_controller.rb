@@ -1,4 +1,5 @@
 class AuthenticationController < ApplicationController
+
   def authenticate_user
     user = User.find_for_database_authentication(email: params[:email])
     if user.valid_password?(params[:password])
@@ -8,8 +9,16 @@ class AuthenticationController < ApplicationController
     end
   end
 
+  def register_user
+    user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
+    if not (user == nil and user.id == nil)
+      render json: {status: ['Success']}
+    else
+      render json: {errors: ['Invalid information']}, status: :unauthorized
+    end
+  end
+  
   private
-
   def payload(user)
     return nil unless user and user.id
     {
