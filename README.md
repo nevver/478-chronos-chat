@@ -21,12 +21,12 @@
 *  **URL Params**
 
    **Required:**
- 
-   `{"email":"[string]", "password":"[string]", "password_comfirmation":"[string]"}`
+
+   None
 
 * **Data Params**
 
-  None
+   `{"email":"[string]", "password":"[string]", "password_comfirmation":"[string]"}`
 
 * **Success Response:**
 
@@ -63,11 +63,11 @@
 
    **Required:**
  
-   `{"email":"[string]", "password":"[string]"}`
+   None
 
 * **Data Params**
 
-  None
+  `{"email":"[string]", "password":"[string]"}`
 
 * **Success Response:**
 
