@@ -2,8 +2,7 @@
 ====
  Currently hosted at https://chronoschat.co. <br />
  The server is currently graded A+ on <a href="https://www.ssllabs.com/">Qualys SSL Labs</a>.
-
-**API Endpoints**
+ 
 ====
 
 **Register User**
