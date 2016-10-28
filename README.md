@@ -110,7 +110,7 @@
 
 * **Data Params**
 
-  Content - json
+  Content - json<br />
   Authorization - Valid JWT Token
 
 * **Success Response:**
