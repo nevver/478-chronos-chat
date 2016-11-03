@@ -278,4 +278,4 @@
 
   * **Code:** 404 Not Found <br />
     **Content:** `{
-  "status": 'error'}`
+  "status": "error"}`
