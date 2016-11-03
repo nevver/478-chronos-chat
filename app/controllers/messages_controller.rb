@@ -31,13 +31,13 @@ class MessagesController < ApplicationController
  		if @message.save
 
  			render json: {
- 				message: 'message sent'
+ 				status: 'Message Sent'
  			}
 
  		else
 
  			render json: {
- 				message: 'error'
+ 				status: 'Error'
  			}
 
  		end
