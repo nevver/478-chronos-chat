@@ -5,16 +5,16 @@ class AuthenticationController < ApplicationController
     if user.valid_password?(params[:password])
       render json: payload(user)
     else
-      render json: {errors: ['Invalid Username/Password']}, status: :unauthorized
+      render json: {error: 'Invalid Username/Password'}, status: :unauthorized
     end
   end
 
   def register_user
     user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
     if not (user == nil or user.id == nil)
-      render json: {status: ['Success']}
+      render json: {status: 'Success'}
     else
-      render json: {errors: ['Invalid information']}, status: :unauthorized
+      render json: {error: 'Invalid information'}, status: :unauthorized
     end
   end
   
