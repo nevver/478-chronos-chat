@@ -190,7 +190,7 @@
   Content-Type - application/json<br />
   Authorization - Valid JWT
   * **Body:** 
-  {"recipient_email":"xy@z.com"}
+  '{"recipient_email":"xy@z.com"}'
 
 * **Success Response:**
 
@@ -265,7 +265,7 @@
   Content-Type - application/json<br />
   Authorization - Valid JWT
   * **Body:** 
-  {"body": "string", "conversation_id": "string"}
+  '{"body": "string", "conversation_id": "string"}''
 
 * **Success Response:**
 
