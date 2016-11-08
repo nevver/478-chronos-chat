@@ -4,7 +4,7 @@ class ConversationsController < ApplicationController
  		@names = User.pluck(:email)
  		@names.delete(current_user.email)
  		@conversations = Conversation.all
-      	render json: @names.to_json
+      	render json: "{\"users\":#{@names.to_json}}"
  	end
 
  	def create
