@@ -22,6 +22,6 @@
 *.rbenv-vars
 *.log
 *.pid
-shared/log/unicorn.stderr.log
 shared/pids/unicorn.pid
+shared/log/unicorn.stderr.log
 
