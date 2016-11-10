@@ -1,10 +1,8 @@
 class ConversationsController < ApplicationController
  before_action :authenticate_request!
 	def index
- 		@names = User.pluck(:email)
- 		@names.delete(current_user.email)
- 		@conversations = Conversation.all
-      	render json: "{\"users\":#{@names.to_json}}"
+		@users_email = User.all
+		render json: @users_email
  	end
 
  	def create
