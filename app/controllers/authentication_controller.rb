@@ -1,5 +1,4 @@
 class AuthenticationController < ApplicationController
-before_action :authenticate_request!
 
   def authenticate_user
     user = User.find_for_database_authentication(email: params[:email])
@@ -20,7 +19,7 @@ before_action :authenticate_request!
   end
   
   def home
-    render json: {'logged_in' => true}
+    render json: {'logged_in' => false}
   end
 
   private
