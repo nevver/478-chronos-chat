@@ -5,6 +5,11 @@ class MessagesController < ApplicationController
 	   check_user
 	end
 
+	def home
+    render json: {'logged_in' => true}
+  	end
+
+
 	def index
 		userNum = @conversation.one_or_2?(current_user)
 		if(userNum == 1)

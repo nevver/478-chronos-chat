@@ -1,5 +1,6 @@
 class ConversationsController < ApplicationController
  before_action :authenticate_request!
+
 	def index
 		@users_email = User.all
 		render json: @users_email
@@ -15,4 +16,8 @@ class ConversationsController < ApplicationController
 		 end
 		 render json: "{\"id\":#{@conversation.id}}"
 	end
+
+	 def home
+    render json: {'logged_in' => true}
+  	end
 end
