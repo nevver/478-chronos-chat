@@ -19,7 +19,6 @@ class MessagesController < ApplicationController
 		end
 
 		render json: @messages
-		puts "Yolo"
 		@messages.each do |message|
 			message.mark_read(current_user)
 		end
@@ -37,13 +36,13 @@ class MessagesController < ApplicationController
 
  			render json: {
  				status: 'Message Sent'
- 			}
+ 			}, status: 200
 
  		else
 
  			render json: {
- 				status: 'Error'
- 			}
+ 				status: 'Error', 
+ 			}, status: 401
 
  		end
  	end
