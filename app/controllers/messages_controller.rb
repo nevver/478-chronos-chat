@@ -25,12 +25,12 @@ class MessagesController < ApplicationController
 	end
 
 	def create
- 		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id])
+ 		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id], user_email: current_user.email)
  		userNum = @conversation.one_or_2?(current_user)
 		if(userNum == 1)
-			@message.read_by_1 = true
+			@message.read_by_1 = false
 		else
-			@message.read_by_2 = true
+			@message.read_by_2 = false
 		end
  		if @message.save
 
@@ -41,7 +41,7 @@ class MessagesController < ApplicationController
  		else
 
  			render json: {
- 				status: 'Error', 
+ 				status: 'Error',
  			}, status: 401
 
  		end
