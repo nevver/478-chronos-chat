@@ -11,27 +11,12 @@ class MessagesController < ApplicationController
 
 
 	def index
-		userNum = @conversation.one_or_2?(current_user)
-		if(userNum == 1)
-			@messages = @conversation.messages.where(read_by_1: false).order(:created_at)
-		else
-			@messages = @conversation.messages.where(read_by_2: false).order(:created_at)
-		end
-
+		@messages = @conversation.messages.order(:created_at)
 		render json: @messages
-		@messages.each do |message|
-			message.mark_read(current_user)
-		end
 	end
 
 	def create
  		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id], user_email: current_user.email)
- 		userNum = @conversation.one_or_2?(current_user)
-		if(userNum == 1)
-			@message.read_by_1 = false
-		else
-			@message.read_by_2 = false
-		end
  		if @message.save
 
  			render json: {
@@ -41,7 +26,7 @@ class MessagesController < ApplicationController
  		else
 
  			render json: {
- 				status: 'Error',
+ 				status: 'Message Failed to Send',
  			}, status: 401
 
  		end
