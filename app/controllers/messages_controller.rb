@@ -5,17 +5,6 @@ class MessagesController < ApplicationController
 	   is_user_in_conversation
 	end
 
-	private
-
- 	def is_user_in_conversation
- 		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
- 			render json: {
-  			error: "Invalid user!",
-  			status: 401
-			}, status: 401
-		end
-	end
-
 	def home
     render json: {'logged_in' => true}
   	end
@@ -43,7 +32,15 @@ class MessagesController < ApplicationController
  		end
  	end
 
-
+	private
+ 	def is_user_in_conversation
+ 		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
+ 			render json: {
+  			error: "Invalid user!",
+  			status: 401
+			}, status: 401
+		end
+	end
 
 
 
