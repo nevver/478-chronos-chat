@@ -41,7 +41,8 @@ class MessagesController < ApplicationController
   			status: 401
 			}, status: 401
 		end
-
 	end
+
+
 
 end

@@ -17,7 +17,7 @@ class AuthenticationController < ApplicationController
       render json: {error: 'Invalid information'}, status: :unauthorized
     end
   end
-  
+
   def home
     render json: {'logged_in' => false}
   end
@@ -30,4 +30,5 @@ class AuthenticationController < ApplicationController
       user: {id: user.id, email: user.email}
     }
   end
+
 end
