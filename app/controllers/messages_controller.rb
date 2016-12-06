@@ -2,7 +2,18 @@ class MessagesController < ApplicationController
 	before_action :authenticate_request!
 	before_action do
 	   @conversation = Conversation.find(params[:conversation_id])
-	   check_user
+	   is_user_in_conversation
+	end
+
+	private
+
+ 	def is_user_in_conversation
+ 		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
+ 			render json: {
+  			error: "Invalid user!",
+  			status: 401
+			}, status: 401
+		end
 	end
 
 	def home
@@ -32,16 +43,7 @@ class MessagesController < ApplicationController
  		end
  	end
 
-	private
 
- 	def check_user
- 		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
- 			render json: {
-  			error: "Invalid user!",
-  			status: 401
-			}, status: 401
-		end
-	end
 
 
 
