@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
 	end
 
 	def create
- 		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id], user_email: current_user.email)
+ 		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id], user_email: current_user.email, body2: params[:body2])
  		if @message.save
 
  			render json: {
@@ -31,6 +31,7 @@ class MessagesController < ApplicationController
 
  		end
  	end
+
 
 	private
  	def is_user_in_conversation

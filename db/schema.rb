@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203120447) do
+ActiveRecord::Schema.define(version: 20161208083559) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20161203120447) do
     t.boolean  "read_by_1",       default: false
     t.boolean  "read_by_2",       default: false
     t.string   "user_email"
+    t.text     "body2"
     t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
