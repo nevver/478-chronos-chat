@@ -13,7 +13,7 @@
 
 * **URL**
 
-  /reg_user
+  /registration
 
 * **Method:**
 
@@ -52,7 +52,7 @@
 
 * **URL**
 
-  /auth_user
+  /authenticate
 
 * **Method:**
 
