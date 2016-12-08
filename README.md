@@ -1,8 +1,9 @@
 **Chronos Chat API**
 ====
  Currently hosted at https://chronoschat.co. <br />
- The server is currently graded A+ on <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>.
- 
+ The server is currently graded A+ on <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
+ The client can be found https://github.com/dndo1/auth. <br>
+
 ====
 
 **Register User**
