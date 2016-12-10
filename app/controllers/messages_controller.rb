@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
 	end
 
 	def create
- 		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id], user_email: current_user.email, body2: params[:body2])
+ 		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id], user_email: current_user.email, body2: params[:body2], nc: params[:nc], nc2: params[:nc2], tag: params[:tag], tag2: params[:tag2], key: params[:key], key2: params[:key2])
  		if @message.save
 
  			render json: {
