@@ -28,3 +28,4 @@
 shared/pids/unicorn.pid
 shared/log/unicorn.stderr.log
 
+config/
