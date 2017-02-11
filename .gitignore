@@ -17,6 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+/config/*
+
+
 # Ignore Byebug command history file.
 .byebug_history
 *.rbenv-vars
