@@ -21,13 +21,13 @@ class MessagesController < ApplicationController
 
  			render json: {
  				status: 'Message Sent'
- 			}, status: 200
+ 			}, status: :ok
 
  		else
 
  			render json: {
  				status: 'Message Failed to Send',
- 			}, status: 401
+ 			}, status: :bad_request
 
  		end
  	end
@@ -38,8 +38,8 @@ class MessagesController < ApplicationController
  		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
  			render json: {
   			error: "Invalid user!",
-  			status: 401
-			}, status: 401
+  			status: :bad_request
+			}, status: :bad_request
 		end
 	end
 

@@ -19,7 +19,7 @@
 * **Method:**
 
   `POST`
-  
+
 *  **URL Params**
 
    **Required:**
@@ -28,7 +28,7 @@
 
 * **Data Params**
   * **Body:**
-   `{"email":"string", "password":"string", "password_comfirmation":"string"}`
+   `{"email":"string", "password":"string"}`
 
 * **Success Response:**
 
@@ -37,12 +37,12 @@
   "status":
     "Success"
 }`
- 
+
 * **Error Response:**
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** 400 <br />
     **Content:** `{
-  "error": 
+  "error":
     "Invalid information"
 }`
 
@@ -58,11 +58,11 @@
 * **Method:**
 
   `POST`
-  
+
 *  **URL Params**
 
    **Required:**
- 
+
    None
 
 * **Data Params**
@@ -79,10 +79,10 @@
     "email": "x@x.am"
   }
 }`
- 
+
 * **Error Response:**
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** 400 <br />
     **Content:** `{
   "error":
     "Invalid Username/Password"
@@ -100,11 +100,11 @@
 * **Method:**
 
   `GET`
-  
+
 *  **URL Params**
 
    **Required:**
- 
+
    None
 
 * **Data Params**
@@ -118,12 +118,12 @@
     **Content:** `{
   "logged_in": true
 }`
- 
+
 * **Error Response:**
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{
-  "error": 
+  "error":
     "Not Authenticated"
 }`
 
@@ -139,7 +139,7 @@
 * **Method:**
 
   `GET`
-  
+
 *  **URL Params**
 
    **Required:**
@@ -156,14 +156,14 @@
   * **Code:** 200 <br />
     **Content:** `[
   "xy@z.com",
-  "xy@z.com", 
+  "xy@z.com",
   "...",
   "xy@z.com"
 ]`
- 
+
 * **Error Response:**
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** 401 <br />
     **Content:** `{
   "error": "Not Authenticated"
 }`
@@ -180,7 +180,7 @@
 * **Method:**
 
   `POST`
-  
+
 *  **URL Params**
 
    **Required:**
@@ -191,7 +191,7 @@
   * **Headers:** <br />
   Content-Type - application/json<br />
   Authorization - Valid JWT
-  * **Body:** 
+  * **Body:**
   `{"recipient_email":"xy@z.com"}`
 
 * **Success Response:**
@@ -200,7 +200,7 @@
     **Content:** `{
   "id": 4235
 }`
- 
+
 * **Error Response:**
 
   * **Code:** 500 <br />
@@ -218,7 +218,7 @@
 * **Method:**
 
   `GET`
-  
+
 *  **URL Params**
 
    **Required:** <br />
@@ -234,10 +234,10 @@
 
   * **Code:** 200 <br />
     **Content:** `[ Messages ]`
- 
+
 * **Error Response:**
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** 401 <br />
     **Content:** `{
   "error": "Not Authenticated"
 }`
@@ -255,7 +255,7 @@
 * **Method:**
 
   `POST`
-  
+
 *  **URL Params**
 
    **Required:**
@@ -266,7 +266,7 @@
   * **Headers:** <br />
   Content-Type - application/json<br />
   Authorization - Valid JWT
-  * **Body:** 
+  * **Body:**
   `{"body": "string", "conversation_id": "string", "body2": "string", "nc": "string", "nc2": "string", "tag": "string", "tag2": "string", "key": "string", "key2": "string"}`
 
 * **Success Response:**
@@ -275,9 +275,9 @@
     **Content:** `{
   "status": "Message Sent"
 }`
- 
+
 * **Error Response:**
 
-  * **Code:** 404 Not Found <br />
+  * **Code:** 400 <br />
     **Content:** `{
   "status": "error"}`
