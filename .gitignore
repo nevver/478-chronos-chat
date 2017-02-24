@@ -17,9 +17,6 @@
 !/log/.keep
 !/tmp/.keep
 
-/config/*
-
-
 # Ignore Byebug command history file.
 .byebug_history
 *.rbenv-vars
@@ -28,5 +25,3 @@
 shared/pids/unicorn.pid
 shared/log/unicorn.stderr.log
 
-config/
-shared/
