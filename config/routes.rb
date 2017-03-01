@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   #devise_for :users
-  get '' => 'home#home'
-  get  'home' => 'home#index'
+  get  '' => 'home#index'
   post 'authenticate' => 'authentication#authenticate_user'
   post 'registration' => 'authentication#register_user'
   get  '/conversations' => 'conversations#home'
