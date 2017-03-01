@@ -267,7 +267,7 @@
   Content-Type - application/json<br />
   Authorization - Valid JWT
   * **Body:**
-  `{"body": "string", "conversation_id": "string", "body2": "string", "nc": "string", "nc2": "string", "tag": "string", "tag2": "string", "key": "string", "key2": "string"}`
+  `{"body": "string", "conversation_id":<id>, "body2": "string", "nc": "string", "nc2": "string", "tag": "string", "tag2": "string", "key": "string", "key2": "string"}`
 
 * **Success Response:**
 
