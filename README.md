@@ -1,10 +1,10 @@
 **Chronos Chat API**
 ====
  Currently hosted at https://chronoschat.co. <br />
- The server is currently graded A+ on <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
+ The server is currently graded `A+` by <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
  The client can be found https://github.com/dndo1/auth. <br>
  The improved v2 client can be found https://github.com/nevver/chronosclient. <br>
- The public key distribution API can befound https://github.com/nevver/chronospkd
+ The public key distribution API can befound https://github.com/nevver/chronospkd. <br>
 
 ====
 
@@ -268,7 +268,7 @@
   Content-Type - application/json<br />
   Authorization - Valid JWT
   * **Body:**
-  `{"body": "string", "conversation_id":<id>, "body2": "string", "nc": "string", "nc2": "string", "tag": "string", "tag2": "string", "key": "string", "key2": "string"}`
+  `{"body": "string", "conversation_id":id, "body2": "string", "nc": "string", "nc2": "string", "tag": "string", "tag2": "string", "key": "string", "key2": "string"}`
 
 * **Success Response:**
 
