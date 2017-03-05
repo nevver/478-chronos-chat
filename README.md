@@ -1,4 +1,4 @@
-**Chronos Chat API**
+**Chronos Chat API ![icon](https://github.com/nevver/ChronosClient/blob/master/ChronosClient/Assets/Square44x44Logo.targetsize-24_altform-unplated.png?raw=true)**
 ====
  Currently hosted at https://chronoschat.co. <br />
  The server is currently graded `A+` by <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
