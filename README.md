@@ -1,9 +1,8 @@
 **Chronos Chat API ![icon](https://github.com/nevver/ChronosClient/blob/master/ChronosClient/Assets/Square44x44Logo.targetsize-24_altform-unplated.png?raw=true)**
 ====
  Currently hosted at https://chronoschat.co. <br />
- The server is currently graded `A+` by <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
- The client can be found https://github.com/dndo1/auth. <br>
- The improved v2 client can be found https://github.com/nevver/chronosclient. <br>
+ The server is graded `A+` by <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
+ The client can be found https://github.com/nevver/chronosclient. <br>
  The public key distribution API can befound https://github.com/nevver/chronospkd. <br>
 
 ====
@@ -11,7 +10,7 @@
 **Register User**
 ----
 
-  Returns registration status.
+  Register a user.
 
 * **URL**
 
@@ -29,7 +28,7 @@
 
 * **Data Params**
   * **Body:**
-   `{"email":"string", "password":"string"}`
+   `{"email":"string", "password":"string", "first_name":"string", "last_name":"string"}`
 
 * **Success Response:**
 
@@ -50,7 +49,7 @@
 **Authorize User**
 ----
 
-  Returns JWT status.
+  Authenticate a user.
 
 * **URL**
 
@@ -89,44 +88,6 @@
     "Invalid Username/Password"
 }`
 
-**Home**
-----
-
-  Returns logged in status.
-
-* **URL**
-
-  /home
-
-* **Method:**
-
-  `GET`
-
-*  **URL Params**
-
-   **Required:**
-
-   None
-
-* **Data Params**
-  * **Headers:** <br />
-  Content-Type - application/json<br />
-  Authorization - Valid JWT
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** `{
-  "logged_in": true
-}`
-
-* **Error Response:**
-
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{
-  "error":
-    "Not Authenticated"
-}`
 
 **Conversations**
 ----
@@ -204,13 +165,13 @@
 
 * **Error Response:**
 
-  * **Code:** 500 <br />
-    **Content:** `NULL`
+  * **Code:** 400 <br />
+
 
 **Get Messages**
 ----
 
-  Shows a list of unread messages.
+  Shows the conversation thread.
 
 * **URL**
 
@@ -239,9 +200,7 @@
 * **Error Response:**
 
   * **Code:** 401 <br />
-    **Content:** `{
-  "error": "Not Authenticated"
-}`
+
 
 
 **Create Message**
