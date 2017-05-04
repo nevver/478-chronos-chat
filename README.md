@@ -5,7 +5,6 @@
  The client can be found https://github.com/nevver/chronosclient. <br>
  The public key distribution API can befound https://github.com/nevver/chronospkd. <br>
 
-====
 
 **Register User**
 ----
