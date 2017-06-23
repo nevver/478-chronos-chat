@@ -1,9 +1,9 @@
 **Chronos Chat API ![icon](https://github.com/nevver/ChronosClient/blob/master/ChronosClient/Assets/Square44x44Logo.targetsize-24_altform-unplated.png?raw=true)**
 ====
  Currently hosted at https://chronoschat.co. <br />
- The server is graded `A+` by <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
- The client can be found https://github.com/nevver/chronosclient. <br>
- The public key distribution API can befound https://github.com/nevver/chronospkd. <br>
+ The server can be tested on <a href="https://www.ssllabs.com/ssltest/analyze.html?d=chronoschat.co">Qualys SSL Labs</a>. <br>
+ The UWP client repo is  https://github.com/nevver/chronosclient. <br>
+ The public key distribution API repo is https://github.com/nevver/chronospkd. <br>
 
 
 **Register User**
