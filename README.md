@@ -1,6 +1,7 @@
 **Chronos Chat API ![icon](https://github.com/nevver/ChronosClient/blob/master/ChronosClient/Assets/Square44x44Logo.targetsize-24_altform-unplated.png?raw=true)**
 ====
-The public key distribution API repo is https://github.com/nevver/chronospkd. <br>
+Ruby on Rails RESTful web messenger API <br>
+The accompanying public key distribution API repo is https://github.com/nevver/chronospkd. <br>
 The UWP client repo is  https://github.com/nevver/chronosclient. <br>
  
 
